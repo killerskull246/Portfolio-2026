@@ -109,14 +109,9 @@ body {
 .Profile_Pic {
     position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
     border: none;
     background-color: #1a1a1a;
-    width: min(1060px, 92%);
     max-width: 1060px;
-    height: auto;
     margin: 6% auto;
     padding: 4px;
     z-index: -1;
@@ -441,10 +436,13 @@ header {
     .Activities {
         min-height: 0;
     }
+
     .Profile_Pic {
         width: 94%;
+        height: auto;
         max-width: 400px;
         margin: 12% auto 8%;
+        box-sizing: border-box;
     }
 
     .Title,
@@ -536,6 +534,7 @@ header {
     .TitleAct {
         font-size: 28px;
     }
+
     .Profile_Pic {
         width: 100%;
         max-width: 270px;
@@ -551,4 +550,4 @@ header {
         max-width: 270px;
         min-height: 294px;
     }
-}     
+}

@@ -1,4 +1,4 @@
-/* Base styles */
+/*Base styles*/
 body {
     line-height: 1;
     margin: 0;
@@ -244,12 +244,7 @@ header {
     display: none;
 }
 
-/* =========================
-   Responsive Design
-   Desktop → Tablet → Phone
-   ========================= */
-
-/* Large desktop */
+/*Large desktop*/
 @media screen and (min-width: 1261px) {
     .Btext {
         width: min(1260px, 92%);
@@ -265,7 +260,7 @@ header {
     }
 }
 
-/* Tablet and smaller desktop */
+/*Tablet and smaller desktop*/
 @media screen and (max-width: 1260px) {
     .Btext {
         width: 92%;
@@ -357,7 +352,7 @@ header {
     .button3::before { left: 67.6%; }
 }
 
-/* Tablet */
+/*Tablet*/
 @media screen and (max-width: 900px) {
     .Btext {
         font-size: 19px;
@@ -389,7 +384,7 @@ header {
     }
 }
 
-/* Phone */
+/*Phone*/
 @media screen and (max-width: 600px) {
     body {
         overflow-x: hidden;

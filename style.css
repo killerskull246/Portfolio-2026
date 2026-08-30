@@ -122,29 +122,105 @@ body {
     z-index: -1;
 }
 
+.Menu {
+    background: linear-gradient(to right, hsl(310, 80%, 40%), #c46732, #f7e709);
+    font-family: Calibri, sans-serif;
+    padding: 0 15px;
+    position: sticky;
+    border: 1px solid #eedf0b;
+    line-height: 0.8;
+    z-index: 1;
+}
 
+.container1 {
+    display: flex;
+    align-items: center;
+}
 
+.Text_Logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: white;
+}
 
+.container2 {
+    margin-top: 1.5%;
+    margin-left: 1%;
+    color: #b3b3b3;
+}
 
+ul {
+    position: relative;
+    left: 50%;
+}
 
+li {
+    list-style: none;
+    display: inline-flex;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 25px;
+}
 
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: #1b1b1b;
+    z-index: 1;
+}
 
+.button1,
+.button2,
+.button3 {
+    text-decoration: none;
+    text-align: center;
+    border: 1.6px solid #8a10ee;
+    margin-left: 10px;
+    border-radius: 16px;
+    padding: 10px;
+    width: 90px;
+    color: #8a10ee;
+    font-weight: bold;
+    font-size: 15px;
+    --accent-color: #ffc400c5;
+    transition: color 300ms ease-in-out;
+    z-index: 1;
+}
 
-
-
-
-
-
-
-
-
-
+.button1::before,
+.button2::before,
+.button3::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    margin-left: 10px;
+    border-radius: 16px;
+    padding: 10px;
+    width: 90px;
+    background-color: var(--accent-color);
+    transition: transform 300ms ease-in-out;
+    transform: scaleX(0);
+}
 
 .button1::before { left: 8.6%; }
 .button2::before { left: 39.3%; }
 .button3::before { left: 70.1%; }
 
-
+.button1:hover::before,
+.button1:focus::before,
+.button2:hover::before,
+.button2:focus::before,
+.button3:hover::before,
+.button3:focus::before {
+    transform: scaleX(1);
+}
 
 .button1:hover,
 .button1:focus,
@@ -156,239 +232,24 @@ body {
     border: 1px solid white;
 }
 
-/* =========================
-   Navigation
-   ========================= */
-
-.Menu {
-    background: linear-gradient(to right, hsl(310, 80%, 40%), #c46732, #f7e709);
-    font-family: Calibri, sans-serif;
-    padding: 8px 18px;
-    border: 1px solid #eedf0b;
-    position: sticky;
-    top: 0;
-    z-index: 10;
+.topnav a:hover {
+    background-color: white;
 }
 
-.container1 {
-    min-height: 55px;
-    display: flex;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-}
-
-.brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.Text_Logo {
-    font-size: 25px;
-    font-weight: 600;
+.topnav a.active {
     color: white;
-    margin: 0;
 }
 
-.Iconlogo {
-    flex-shrink: 0;
-}
-
-.topnav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 12px;
-    margin: 0 0 0 auto;
-    padding: 0;
-    list-style: none;
-}
-
-.topnav li {
-    list-style: none;
-    margin: 0;
-    display: block;
-}
-
-/* Navigation boxes */
-.button1,
-.button2,
-.button3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-    box-sizing: border-box;
-    min-width: 110px;
-    height: 42px;
-    padding: 0 18px;
-    border: 1.6px solid #8a10ee;
-    border-radius: 12px;
-    color: #8a10ee;
-    background: #1b1b1b;
-    text-decoration: none;
-    text-align: center;
-    font-weight: bold;
-    font-size: 15px;
-    transition: color 300ms ease-in-out, border-color 300ms ease-in-out, transform 200ms ease;
-    z-index: 1;
-}
-
-/* Keep the original gradient hover/fill effect */
-.button1::before,
-.button2::before,
-.button3::before {
-    position: absolute;
-    content: "";
-    inset: 0;
-    z-index: -1;
-    border-radius: 10px;
-    background: linear-gradient(to right, hsl(310, 80%, 40%), #c46732, #f7e709);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 300ms ease-in-out;
-}
-
-.button1:hover::before,
-.button1:focus-visible::before,
-.button2:hover::before,
-.button2:focus-visible::before,
-.button3:hover::before,
-.button3:focus-visible::before {
-    transform: scaleX(1);
-}
-
-.button1:hover,
-.button1:focus-visible,
-.button2:hover,
-.button2:focus-visible,
-.button3:hover,
-.button3:focus-visible {
-    color: white;
-    border-color: white;
-    outline: none;
-    transform: translateY(-1px);
-}
-
-/* Hamburger button */
 .menuicon {
     display: none;
-    margin-left: auto;
-    width: 44px;
-    height: 44px;
-    padding: 8px;
-    border: 1.6px solid #8a10ee;
-    border-radius: 12px;
-    background: #1b1b1b;
-    cursor: pointer;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
 }
-
-.menuicon span {
-    display: block;
-    width: 100%;
-    height: 3px;
-    border-radius: 5px;
-    background: white;
-    transition: transform 250ms ease, opacity 250ms ease;
-}
-
-/* Tablet / phone dropdown */
-@media screen and (max-width: 900px) {
-    .Menu {
-        padding: 6px 12px;
-    }
-
-    .container1 {
-        min-height: 50px;
-    }
-
-    .Text_Logo {
-        font-size: 22px;
-    }
-
-    .menuicon {
-        display: flex;
-    }
-
-    .topnav {
-        position: absolute;
-        top: calc(100% + 8px);
-        left: 0;
-        right: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        gap: 8px;
-        padding: 12px;
-        margin: 0;
-        border: 1px solid #eedf0b;
-        border-radius: 14px;
-        background: #1b1b1b;
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        pointer-events: none;
-        transition: opacity 200ms ease, transform 200ms ease, visibility 200ms ease;
-    }
-
-    .topnav li,
-    .topnav li a {
-        width: 100%;
-    }
-
-    .topnav.responsive {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-
-    .button1,
-    .button2,
-    .button3 {
-        width: 100%;
-        height: 45px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .Text_Logo {
-        font-size: 20px;
-    }
-
-    .Iconlogo {
-        width: 32px;
-        height: auto;
-    }
-
-    .topnav {
-        top: calc(100% + 6px);
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .Text_Logo {
-        font-size: 18px;
-    }
-
-    .menuicon {
-        width: 40px;
-        height: 40px;
-    }
-}
-
 
 /* =========================
-   Responsive page layout
+   Responsive Design
+   Desktop → Tablet → Phone
    ========================= */
 
+/* Large desktop */
 @media screen and (min-width: 1261px) {
     .Btext {
         width: min(1260px, 92%);
@@ -404,6 +265,7 @@ body {
     }
 }
 
+/* Tablet and smaller desktop */
 @media screen and (max-width: 1260px) {
     .Btext {
         width: 92%;
@@ -420,9 +282,17 @@ body {
         height: auto;
     }
 
-    .About { min-height: 250px; }
-    .Skills { min-height: 670px; }
-    .Activities { min-height: 3670px; }
+    .About {
+        min-height: 250px;
+    }
+
+    .Skills {
+        min-height: 670px;
+    }
+
+    .Activities {
+        min-height: 3670px;
+    }
 
     .Profile_Pic {
         width: 92%;
@@ -430,8 +300,64 @@ body {
         box-sizing: border-box;
         margin: 5% auto;
     }
+
+    .Text_Logo {
+        font-size: 25px;
+    }
+
+    .container1 .Iconlogo img {
+        width: 36px;
+        height: 31px;
+    }
+
+    .Menu .container1 .topnav {
+        position: absolute;
+        top: 42px;
+        left: 0;
+        right: 0;
+        text-align: right;
+    }
+
+    .topnav li a {
+        display: none;
+        font-size: 14px;
+    }
+
+    .container1 .menuicon {
+        position: absolute;
+        right: 3%;
+        display: block;
+    }
+
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .menuicon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+    }
+
+    .button1::before,
+    .button2::before,
+    .button3::before {
+        top: 5%;
+        width: 88px;
+        height: 10px;
+    }
+
+    .button1::before { left: 9%; }
+    .button2::before { left: 38%; }
+    .button3::before { left: 67.6%; }
 }
 
+/* Tablet */
 @media screen and (max-width: 900px) {
     .Btext {
         font-size: 19px;
@@ -452,11 +378,37 @@ body {
     .Profile_Pic {
         width: 94%;
     }
+
+    ul {
+        left: auto;
+    }
+
+    li {
+        margin-right: 12px;
+        font-size: 16px;
+    }
 }
 
+/* Phone */
 @media screen and (max-width: 600px) {
     body {
         overflow-x: hidden;
+    }
+
+    header {
+        height: 55px;
+    }
+
+    .Menu {
+        padding: 0 10px;
+    }
+
+    .container1 {
+        min-height: 55px;
+    }
+
+    .Text_Logo {
+        font-size: 20px;
     }
 
     .Btext {
@@ -476,15 +428,23 @@ body {
         margin: 15px auto;
         border-radius: 18px;
         height: auto;
+    }
+
+    .About {
         min-height: 0;
     }
 
+    .Skills {
+        min-height: 0;
+    }
+
+    .Activities {
+        min-height: 0;
+    }
     .Profile_Pic {
         width: 94%;
         max-width: 400px;
-        height: auto;
         margin: 12% auto 8%;
-        box-sizing: border-box;
     }
 
     .Title,
@@ -498,6 +458,46 @@ body {
 
     .Sbar h6 {
         right: 0;
+    }
+
+    ul {
+        left: auto;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        display: block;
+        margin: 8px 0;
+        font-size: 15px;
+    }
+
+    .topnav {
+        text-align: right;
+    }
+
+    .topnav.responsive {
+        background: #1b1b1b;
+        padding: 10px;
+    }
+
+    .topnav.responsive a {
+        padding: 8px 0;
+    }
+
+    .button1,
+    .button2,
+    .button3 {
+        width: 80px;
+        padding: 8px;
+        margin-left: 5px;
+        font-size: 13px;
+    }
+
+    .button1::before,
+    .button2::before,
+    .button3::before {
+        display: none;
     }
 
     .plab1,
@@ -514,7 +514,12 @@ body {
     }
 }
 
+/* Small phone */
 @media screen and (max-width: 380px) {
+    .Text_Logo {
+        font-size: 18px;
+    }
+
     .Btext {
         width: 92%;
         font-size: 16px;
@@ -531,10 +536,19 @@ body {
     .TitleAct {
         font-size: 28px;
     }
-
     .Profile_Pic {
         width: 100%;
         max-width: 270px;
         margin: 12% auto;
+    }
+
+    .plab1,
+    .plab2,
+    .plab3,
+    .plab4,
+    .plab5,
+    .plab6 {
+        max-width: 270px;
+        min-height: 294px;
     }
 }

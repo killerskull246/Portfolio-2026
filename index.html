@@ -10,32 +10,35 @@
 
     <header>
         <nav class="Menu">
-		    <div class="container1">
-				<img src="Iconlogo-removebg-preview.png" width="36" height="31" class="Iconlogo">
-            	<h1 class="Text_Logo">
-                My Portfolio
-              </h1>
+            <div class="container1">
+                <div class="brand">
+                    <img src="Iconlogo-removebg-preview.png" width="36" height="31" class="Iconlogo" alt="Portfolio logo">
+                    <h1 class="Text_Logo">My Portfolio</h1>
+                </div>
+
+                <button class="menuicon" type="button" onclick="myFunction()" aria-label="Open navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
                 <ul class="topnav" id="myTopnav">
-                  <li><a href="#About" class="button1">About Me</a></li> 
-                  <li><a href="#Skills"class="button2">Skills</a></li> 
-                  <li><a href="#Activities"class="button3">Activities</a></li>
+                    <li><a href="#About" class="button1">About Me</a></li>
+                    <li><a href="#Skills" class="button2">Skills</a></li>
+                    <li><a href="#Activities" class="button3">Activities</a></li>
                 </ul>
+            </div>
+        </nav>
 
-                <a href="javascript:void(0);" class="menuicon" onclick="myFunction()">
-                    <svg xmlns="http://www.w3.org/2000/svg" height="31" viewBox="0 0 448 512" width="36">
-                        <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/></svg>
-                <a>  
-		    </div>
-	    </nav>
         <script>
             function myFunction() {
-              var x = document.getElementById("myTopnav");
-              if (x.className === "topnav") {
-                x.className += " responsive";
-              } else {
-                x.className = "topnav";
-              }
+                const nav = document.getElementById("myTopnav");
+                const menuButton = document.querySelector(".menuicon");
+
+                nav.classList.toggle("responsive");
+
+                const isOpen = nav.classList.contains("responsive");
+                menuButton.setAttribute("aria-expanded", isOpen);
             }
         </script>
     </header>
@@ -222,12 +225,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-

@@ -1,4 +1,4 @@
-/*Base styles*/
+/* Base styles */
 body {
     line-height: 1;
     margin: 0;
@@ -107,19 +107,15 @@ body {
 }
 
 .Profile_Pic {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-sizing: border-box;
+    display: block;
+    width: 370px;
+    height: 370px;
+    object-fit: cover;
     border: none;
     background-color: #1a1a1a;
-    width: min(1060px, 92%);
-    max-width: 1060px;
-    height: auto;
     margin: 6% auto;
     padding: 4px;
-    z-index: -1;
+    box-sizing: border-box;
 }
 
 .Menu {
@@ -244,7 +240,12 @@ header {
     display: none;
 }
 
-/*Large desktop*/
+/* =========================
+   Responsive Design
+   Desktop → Tablet → Phone
+   ========================= */
+
+/* Large desktop */
 @media screen and (min-width: 1261px) {
     .Btext {
         width: min(1260px, 92%);
@@ -260,8 +261,14 @@ header {
     }
 }
 
-/*Tablet and smaller desktop*/
+/* Tablet and smaller desktop */
 @media screen and (max-width: 1260px) {
+    .Profile_Pic {
+        width: 340px;
+        height: 340px;
+        margin: 5% auto;
+    }
+
     .Btext {
         width: 92%;
         gap: 3rem;
@@ -289,14 +296,8 @@ header {
         min-height: 3670px;
     }
 
-    .Profile_Pic {
-        width: 92%;
-        max-width: 900px;
-        box-sizing: border-box;
-        margin: 5% auto;
-    }
-
-    .Text_Logo {
+    
+.Text_Logo {
         font-size: 25px;
     }
 
@@ -352,8 +353,14 @@ header {
     .button3::before { left: 67.6%; }
 }
 
-/*Tablet*/
+/* Tablet */
 @media screen and (max-width: 900px) {
+    .Profile_Pic {
+        width: 300px;
+        height: 300px;
+        margin: 6% auto;
+    }
+
     .Btext {
         font-size: 19px;
         gap: 2rem;
@@ -370,11 +377,8 @@ header {
         font-size: 40px;
     }
 
-    .Profile_Pic {
-        width: 94%;
-    }
-
-    ul {
+    
+ul {
         left: auto;
     }
 
@@ -384,8 +388,14 @@ header {
     }
 }
 
-/*Phone*/
+/* Phone */
 @media screen and (max-width: 600px) {
+    .Profile_Pic {
+        width: 240px;
+        height: 240px;
+        margin: 10% auto;
+    }
+
     body {
         overflow-x: hidden;
     }
@@ -436,13 +446,8 @@ header {
     .Activities {
         min-height: 0;
     }
-    .Profile_Pic {
-        width: 94%;
-        max-width: 400px;
-        margin: 12% auto 8%;
-    }
-
-    .Title,
+    
+.Title,
     .TitleAct {
         font-size: 32px;
     }
@@ -511,6 +516,12 @@ header {
 
 /* Small phone */
 @media screen and (max-width: 380px) {
+    .Profile_Pic {
+        width: 200px;
+        height: 200px;
+        margin: 10% auto;
+    }
+
     .Text_Logo {
         font-size: 18px;
     }
@@ -531,13 +542,8 @@ header {
     .TitleAct {
         font-size: 28px;
     }
-    .Profile_Pic {
-        width: 100%;
-        max-width: 270px;
-        margin: 12% auto;
-    }
-
-    .plab1,
+    
+.plab1,
     .plab2,
     .plab3,
     .plab4,
@@ -545,26 +551,5 @@ header {
     .plab6 {
         max-width: 270px;
         min-height: 294px;
-    }
-}
-
-/*Profile picture responsive behavior*/
-@media screen and (max-width: 600px) {
-    .Profile_Pic {
-        display: block;
-        width: 210px;
-        height: 229px;
-        max-width: 85%;
-        margin: 12% auto;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .Profile_Pic {
-        display: block;
-        width: 190px;
-        height: 208px;
-        max-width: 85%;
-        margin: 10% auto;
     }
 }

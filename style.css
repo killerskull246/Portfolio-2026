@@ -547,3 +547,24 @@ header {
         min-height: 294px;
     }
 }
+
+/*Profile picture responsive behavior*/
+@media screen and (max-width: 600px) {
+    .Profile_Pic {
+        display: block;
+        width: 210px;
+        height: 229px;
+        max-width: 85%;
+        margin: 12% auto;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .Profile_Pic {
+        display: block;
+        width: 190px;
+        height: 208px;
+        max-width: 85%;
+        margin: 10% auto;
+    }
+}

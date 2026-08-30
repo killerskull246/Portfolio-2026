@@ -108,15 +108,17 @@ body {
 
 .Profile_Pic {
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
     border: none;
     background-color: #1a1a1a;
-    width: 300px;
-    height: 320px;
-    max-width: 100%;
-    margin: 4% 0;
+    width: min(1060px, 92%);
+    max-width: 1060px;
+    height: auto;
+    margin: 6% auto;
     padding: 4px;
-    box-sizing: border-box;
     z-index: -1;
 }
 
@@ -548,27 +550,5 @@ header {
     .plab6 {
         max-width: 270px;
         min-height: 294px;
-    }
-}
-
-
-/* Profile picture responsive behavior */
-@media screen and (max-width: 600px) {
-    .Profile_Pic {
-        display: block;
-        width: 270px;
-        height: 294px;
-        max-width: 85%;
-        margin: 12% auto;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .Profile_Pic {
-        display: block;
-        width: 250px;
-        height: 273px;
-        max-width: 85%;
-        margin: 10% auto;
     }
 }

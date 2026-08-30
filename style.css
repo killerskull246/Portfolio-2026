@@ -353,7 +353,7 @@ header {
     top: 0;
     left: 0;
     right: 0;
-    height: 85px;
+    height: 58px;
 
     background: #1b1b1b;
     z-index: 1;
@@ -577,15 +577,6 @@ header {
     top: 42px;
     left: 0;
     right: 0;
-
-
-    height: 60%;
-    flex-direction: column;
-    align-content: center;
-    background: #1b1b1b;
-    overflow: hidden;
-    border-bottom: 1px solid #585858;
-    z-index: -1;
     }
 }
 

@@ -360,81 +360,72 @@ li {
 
 
 /* =========================================================
-   PROFILE PIC - ANIMATED GRADIENT BORDER
+   PROFILE PICTURE / 1x1
    ========================================================= */
 
-.Profile_Frame {
-    position: relative;
+.Profile_Pic {
+    display: block;
 
     width: 370px;
     height: 370px;
+
+    object-fit: cover;
+
+    border: none;
+
+    margin: 0 auto;
+
+    box-sizing: border-box;
+
+    border-radius: 20px;
+}
+
+
+/* Animated border */
+
+.animated-border {
+    width: 370px;
+    height: 370px;
+
+    padding: 4px;
+
+    background: linear-gradient(
+        45deg,
+        #6a0dad,
+        #9b30ff,
+        #f7e709,
+        #333333,
+        #111111,
+        #6a0dad
+    );
+
+    background-size: 400% 400%;
+
+    border-radius: 25px;
+
+    animation: borderAnimation 4s linear infinite;
+
+    box-sizing: border-box;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     margin: 0 auto;
-
-    border-radius: 50%;
-
-    overflow: hidden;
 }
 
-
-/* Animated border */
-
-.Profile_Frame::before {
-    content: "";
-
-    position: absolute;
-
-    width: 150%;
-    height: 150%;
-
-       background: linear-gradient(
-        45deg,
-        #6a0dad, #9b30ff, #f7e709, #333333, #111111, #6a0dad
-    );
-
-
-    animation: profileBorder 4s linear infinite;
-
-    z-index: 0;
-}
-
-
-/* Actual picture */
-
-.Profile_Pic {
-    position: relative;
-
-    width: 360px;
-    height: 360px;
-
-    object-fit: cover;
-
-    border-radius: 50%;
-
-    background-color: #1a1a1a;
-
-    padding: 4px;
-
-    z-index: 1;
-}
-
-
-/* Border animation */
-
-@keyframes profileBorder {
-
+@keyframes borderAnimation {
     0% {
-        transform: rotate(0deg);
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
     }
 
     100% {
-        transform: rotate(360deg);
+        background-position: 0% 50%;
     }
-
 }
 
 /* =========================================================
@@ -756,12 +747,12 @@ li {
     }
 
 
-    .Profile_Pic {
-        width: 240px;
-        height: 240px;
 
-        margin: 0 auto;
-    }
+   .Profile_Pic,
+.animated-border {
+    width: 240px;
+    height: 240px;
+}
 
 
     .Title,
@@ -909,10 +900,11 @@ li {
     }
 
 
-    .Profile_Pic {
-        width: 200px;
-        height: 200px;
-    }
+    .Profile_Pic,
+.animated-border {
+    width: 200px;
+    height: 200px;
+}
 
 
     .Title,

@@ -16,6 +16,14 @@ body {
     line-height: 1;
     background-color: #333;
     overflow-x: hidden;
+   
+    background-image: url("wallpaper1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow-x: hidden;
 }
 
 

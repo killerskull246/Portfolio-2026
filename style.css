@@ -266,6 +266,7 @@ header {
 /* Tablet and smaller desktop */
 @media screen and (max-width: 1260px) {
     .Profile_Pic {
+        justify-content: center;
         width: 340px;
         height: 340px;
         margin: 5% auto;

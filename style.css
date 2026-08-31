@@ -371,13 +371,11 @@ li {
 
     object-fit: cover;
 
-    border: none;
+    border-radius: 50%;
 
     margin: 0 auto;
 
     box-sizing: border-box;
-
-    border-radius: 20px;
 }
 
 
@@ -388,6 +386,8 @@ li {
     height: 370px;
 
     padding: 4px;
+
+    border-radius: 50%;
 
     background: linear-gradient(
         45deg,
@@ -400,8 +400,6 @@ li {
     );
 
     background-size: 400% 400%;
-
-    border-radius: 25px;
 
     animation: borderAnimation 4s linear infinite;
 
@@ -749,10 +747,12 @@ li {
 
 
    .Profile_Pic,
-.animated-border {
-    width: 240px;
-    height: 240px;
-}
+    .animated-border {
+        width: 240px;
+        height: 240px;
+    }
+
+
 
 
     .Title,
@@ -901,10 +901,11 @@ li {
 
 
     .Profile_Pic,
-.animated-border {
-    width: 200px;
-    height: 200px;
-}
+    .animated-border {
+        width: 200px;
+        height: 200px;
+    }
+
 
 
     .Title,

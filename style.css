@@ -86,10 +86,10 @@ body {
 /* Skills */
 
 .Skills {
-   margin-top: 105px;
+    margin-top: 50px;
     width: 1440px;
     max-width: 100%;
-    min-height: 670px;
+    min-height: 450px;
 }
 
 

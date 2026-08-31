@@ -391,13 +391,11 @@ li {
     width: 150%;
     height: 150%;
 
-    background: linear-gradient(
+       background: linear-gradient(
         45deg,
-        #00ffff,
-        #00aaff,
-        #8aff00,
-        #00ffff
+        #6a0dad, #9b30ff, #f7e709, #333333, #111111, #6a0dad
     );
+
 
     animation: profileBorder 4s linear infinite;
 

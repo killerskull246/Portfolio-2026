@@ -106,13 +106,21 @@ body {
     flex: auto;
 }
 
+/* 1x1 profile picture - always centered */
+.Btext > div:first-child {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .Profile_Pic {
     display: block;
     width: 370px;
     height: 370px;
+    max-width: 85vw;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
-    border: none;
-    background-color: #1a1a1a;
     margin: 6% auto;
     padding: 4px;
     box-sizing: border-box;
@@ -266,10 +274,11 @@ header {
     .Profile_Pic {
         width: 340px;
         height: 340px;
-        margin: 5% auto;
+        margin: 10% auto;
     }
 
-    .Btext {
+    
+.Btext {
         width: 92%;
         gap: 3rem;
         margin-top: 5%;
@@ -358,10 +367,11 @@ header {
     .Profile_Pic {
         width: 300px;
         height: 300px;
-        margin: 6% auto;
+        margin: 10% auto;
     }
 
-    .Btext {
+    
+.Btext {
         font-size: 19px;
         gap: 2rem;
     }
@@ -396,7 +406,8 @@ ul {
         margin: 10% auto;
     }
 
-    body {
+    
+body {
         overflow-x: hidden;
     }
 
@@ -522,7 +533,8 @@ ul {
         margin: 10% auto;
     }
 
-    .Text_Logo {
+    
+.Text_Logo {
         font-size: 18px;
     }
 

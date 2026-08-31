@@ -299,6 +299,34 @@ header {
 }
 
 
+/* Menu icon - hidden on desktop */
+.menuicon {
+    display: none;
+}
+
+
+/* Tablet and smaller */
+@media screen and (max-width: 1260px) {
+    .menuicon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+/* Phone */
+@media screen and (max-width: 600px) {
+    .menuicon {
+        display: block;
+        right: 5px;
+    }
+}
+
+
+
 /* =========================================================
    NAVIGATION
    ========================================================= */

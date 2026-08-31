@@ -213,6 +213,9 @@ body {
     padding: 4px;
 
     box-sizing: border-box;
+
+    border-radius: 50%;
+
 }
 
 

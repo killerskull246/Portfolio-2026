@@ -611,3 +611,29 @@ ul {
         width: 100%;
     }
 }
+
+
+
+
+
+
+
+/* Space between sections */
+.About,
+.Skills,
+.Activities {
+    margin-bottom: 60px;
+}
+
+/* Extra space around the content */
+.About {
+    padding: 30px;
+}
+
+.Skills {
+    padding: 30px;
+}
+
+.Activities {
+    padding: 30px;
+}

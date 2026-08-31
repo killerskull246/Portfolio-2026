@@ -7,7 +7,7 @@ body {
 }
 
 body {
-    background-image: src="wallpaper1.JPG";
+    background-image: url("1x1pic_gt.JPG");
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

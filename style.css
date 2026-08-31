@@ -10,16 +10,14 @@ body {
     font-family: 'Times New Roman', serif;
     text-align: justify;
     font-size: 21px;
+    gap: 10rem;
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 10rem;
-    width: 100%;
-    max-width: 1260px;
     margin: 0 auto;
     margin-top: 9%;
-    box-sizing: border-box;
+    max-width: 1260px;
+    z-index: -3;
 }
 
 .About,
@@ -118,7 +116,7 @@ body {
     margin: 6% auto;
     padding: 4px;
     box-sizing: border-box;
-}    
+}
 
 .Menu {
     background: linear-gradient(to right, hsl(310, 80%, 40%), #c46732, #f7e709);
@@ -266,7 +264,6 @@ header {
 /* Tablet and smaller desktop */
 @media screen and (max-width: 1260px) {
     .Profile_Pic {
-        justify-content: center;
         width: 340px;
         height: 340px;
         margin: 5% auto;

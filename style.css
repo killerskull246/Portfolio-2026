@@ -10,14 +10,16 @@ body {
     font-family: 'Times New Roman', serif;
     text-align: justify;
     font-size: 21px;
-    gap: 10rem;
-    align-items: center;
+
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap;
-    margin: 0 auto;
-    margin-top: 9%;
+
+    gap: 3rem;
+    width: 92%;
     max-width: 1260px;
-    z-index: -3;
+    margin: 9% auto 0;
 }
 
 .About,
@@ -32,9 +34,10 @@ body {
 }
 
 .About {
-    max-width: 860px;
     width: 640px;
+    max-width: 100%;
     height: 250px;
+    box-sizing: border-box;
 }
 
 .Skills {
@@ -112,8 +115,7 @@ body {
     height: 370px;
     object-fit: cover;
     border: none;
-    background-color: #1a1a1a;
-    margin: 6% auto;
+    margin: 0;
     padding: 4px;
     box-sizing: border-box;
 }
@@ -551,5 +553,59 @@ ul {
     .plab6 {
         max-width: 270px;
         min-height: 294px;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .Btext {
+        gap: 2rem;
+    }
+
+    .Profile_Pic {
+        width: 300px;
+        height: 300px;
+    }
+
+    .About {
+        width: 94%;
+        height: auto;
+        min-height: 250px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Btext {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 94%;
+        margin: 8% auto 0;
+    }
+
+    .Profile_Pic {
+        width: 240px;
+        height: 240px;
+        margin: 0 auto;
+    }
+
+    .About {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .Profile_Pic {
+        width: 200px;
+        height: 200px;
+    }
+
+    .About {
+        width: 100%;
     }
 }

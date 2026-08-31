@@ -76,6 +76,7 @@ body {
 /* About Me */
 
 .About {
+    margin-top: 45px;
     width: 640px;
     max-width: 100%;
     min-height: 250px;

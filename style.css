@@ -2,7 +2,7 @@
    BASE
    ========================================================= */
 
-{
+* {
     box-sizing: border-box;
 }
 
@@ -14,16 +14,235 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1;
-    background-color: #333;
     overflow-x: hidden;
-   
+
+    background-color: #333;
     background-image: url("wallpaper4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
+}
 
-    overflow-x: hidden;
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 60px;
+
+    background: #1b1b1b;
+
+    z-index: 1000;
+}
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.Menu {
+    width: 100%;
+    height: 60px;
+
+    padding: 0 20px;
+
+    background: linear-gradient(
+        to right,
+        hsl(310, 80%, 40%),
+        #c46732,
+        #f7e709
+    );
+
+    border: 1px solid #eedf0b;
+
+    font-family: Calibri, sans-serif;
+    line-height: normal;
+}
+
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
+.container1 {
+    position: relative;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.Iconlogo {
+    width: 36px;
+    height: 31px;
+}
+
+.Text_Logo {
+    margin-left: 10px;
+
+    color: white;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   SECONDARY CONTAINER
+   ========================================================= */
+
+.container2 {
+    margin-top: 1.5%;
+    margin-left: 1%;
+
+    color: #b3b3b3;
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-left: auto;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+
+    display: inline-flex;
+
+    margin: 0;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+   ========================================================= */
+
+.button1,
+.button2,
+.button3 {
+    position: relative;
+
+    display: inline-block;
+
+    width: 90px;
+    padding: 10px;
+    margin-left: 10px;
+
+    box-sizing: border-box;
+
+    color: #8a10ee;
+    background-color: transparent;
+
+    border: 1.6px solid #8a10ee;
+    border-radius: 16px;
+
+    text-decoration: none;
+    text-align: center;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    overflow: hidden;
+    isolation: isolate;
+
+    transition:
+        color 300ms ease,
+        border-color 300ms ease;
+}
+
+
+/* =========================================================
+   NAVIGATION HOVER BACKGROUND
+   ========================================================= */
+
+.button1::before,
+.button2::before,
+.button3::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #ffc400c5;
+
+    border-radius: 14px;
+
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 300ms ease;
+
+    z-index: -1;
+}
+
+
+/* Hover animation */
+
+.button1:hover::before,
+.button2:hover::before,
+.button3:hover::before {
+    transform: scaleX(1);
+}
+
+
+/* Hover text */
+
+.button1:hover,
+.button2:hover,
+.button3:hover {
+    color: white;
+    border-color: white;
+}
+
+
+/* Active link */
+
+.topnav a.active {
+    color: white;
+}
+
+
+/* =========================================================
+   MENU ICON
+   Hidden on desktop
+   ========================================================= */
+
+.menuicon {
+    display: none;
 }
 
 
@@ -32,9 +251,10 @@ body {
    ========================================================= */
 
 .Btext {
-    font-family: 'Times New Roman', serif;
-    text-align: justify;
-    font-size: 21px;
+    width: 92%;
+    max-width: 1260px;
+
+    margin: 12% auto 0;
 
     display: flex;
     align-items: center;
@@ -43,17 +263,16 @@ body {
 
     gap: 3rem;
 
-    width: 92%;
-    max-width: 1260px;
-
-    margin: 12% auto 0;
+    font-family: 'Times New Roman', serif;
+    font-size: 21px;
+    text-align: justify;
 
     z-index: -3;
 }
 
 
 /* =========================================================
-   ABOUT / SKILLS / ACTIVITIES
+   CONTENT BOXES
    ========================================================= */
 
 .About,
@@ -68,41 +287,56 @@ body {
 
     margin-left: auto;
     margin-right: auto;
-
-    box-sizing: border-box;
 }
 
 
-/* About Me */
+/* =========================================================
+   ABOUT ME
+   ========================================================= */
 
 .About {
-    margin-top: 45px;
     width: 640px;
     max-width: 100%;
+
     min-height: 250px;
+
+    margin-top: 45px;
+
+    scroll-margin-top: 80px;
 }
 
 
-/* Skills */
+/* =========================================================
+   SKILLS
+   ========================================================= */
 
 .Skills {
-   margin-top: 105px;
     width: 1440px;
     max-width: 100%;
+
     min-height: 670px;
+
+    margin-top: 105px;
+
+    scroll-margin-top: 80px;
 }
 
 
-/* Activities */
+/* =========================================================
+   ACTIVITIES
+   ========================================================= */
 
 .Activities {
     width: 1440px;
     max-width: 100%;
+
     min-height: 3670px;
+
+    scroll-margin-top: 80px;
 }
 
 
-/* Activity titles */
+/* Activity title */
 
 .Activities div li a h3 {
     flex: auto;
@@ -126,12 +360,37 @@ body {
 
 
 /* =========================================================
-   SKILLS BARS
+   PROFILE / 1x1 PICTURE
+   ========================================================= */
+
+.Profile_Pic {
+    display: block;
+
+    width: 370px;
+    height: 370px;
+
+    margin: 0 auto;
+    padding: 4px;
+
+    box-sizing: border-box;
+
+    object-fit: cover;
+
+    background-color: #1a1a1a;
+
+    border: none;
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   SKILL BARS
    ========================================================= */
 
 .Sbar {
-    display: flex;
     position: relative;
+
+    display: flex;
 }
 
 .Sbar h6 {
@@ -140,7 +399,7 @@ body {
 }
 
 
-/* Empty skill bars */
+/* Empty bars */
 
 .S_htmlbar,
 .S_javabar,
@@ -153,13 +412,13 @@ body {
     width: 100%;
     height: 6px;
 
-    border-radius: 25px;
-
     background: white;
+
+    border-radius: 25px;
 }
 
 
-/* Filled skill bars */
+/* Filled bars */
 
 .S_htmlpar,
 .S_javapar,
@@ -193,273 +452,24 @@ body {
 
 
 /* =========================================================
-   PROFILE / 1x1 PICTURE
+   BOTTOM BOX
    ========================================================= */
 
-.Profile_Pic {
-    display: block;
+.bottom-box {
+    width: 92%;
+    max-width: 1260px;
 
-    width: 370px;
-    height: 370px;
+    height: 120px;
 
-    object-fit: cover;
+    margin: 40px auto 60px;
 
-    border: none;
+    background: #1a1a1a;
 
-    background-color: #1a1a1a;
+    border-radius: 20px;
 
-    margin: 0 auto;
-
-    padding: 4px;
-
-    box-sizing: border-box;
-
-    border-radius: 50%;
-
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
-
-/* =========================================================
-   HEADER
-   ========================================================= */
-
-header {
-    position: sticky;
-
-    top: 0;
-
-    width: 100%;
-    height: 60px;
-
-    background: #1b1b1b;
-
-    z-index: 1000;
-}
-
-
-/* =========================================================
-   MENU
-   ========================================================= */
-
-.Menu {
-    width: 100%;
-    height: 60px;
-
-    box-sizing: border-box;
-
-    background: linear-gradient(
-        to right,
-        hsl(310, 80%, 40%),
-        #c46732,
-        #f7e709
-    );
-
-    font-family: Calibri, sans-serif;
-
-    padding: 0 20px;
-
-    border: 1px solid #eedf0b;
-
-    line-height: normal;
-}
-
-
-/* Header container */
-
-.container1 {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    align-items: center;
-
-    box-sizing: border-box;
-
-    position: relative;
-}
-
-
-/* Logo text */
-
-.Text_Logo {
-    margin-left: 10px;
-
-    font-size: 25px;
-    font-weight: 600;
-
-    color: white;
-
-    white-space: nowrap;
-}
-
-
-/* Secondary container */
-
-.container2 {
-    margin-top: 1.5%;
-    margin-left: 1%;
-
-    color: #b3b3b3;
-}
-
-
-/* Menu icon - hidden on desktop */
-.menuicon {
-    display: none;
-}
-
-
-/* Tablet and smaller */
-@media screen and (max-width: 1260px) {
-    .menuicon {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-}
-
-
-/* Phone */
-@media screen and (max-width: 600px) {
-    .menuicon {
-        display: block;
-        right: 5px;
-    }
-}
-
-
-
-/* =========================================================
-   NAVIGATION
-   ========================================================= */
-
-.topnav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    gap: 10px;
-
-    margin-left: auto;
-
-    padding: 0;
-
-    position: static;
-}
-
-
-li {
-    list-style: none;
-
-    display: inline-flex;
-
-    color: white;
-
-    font-size: 18px;
-    font-weight: bold;
-
-    margin: 0;
-}
-
-
-/* Navigation hover */
-
-.topnav a:hover {
-    background-color: white;
-}
-
-.topnav a.active {
-    color: white;
-}
-
-
-/* Menu icon */
-
-.menuicon {
-    display: none;
-}
-
-
-/* =========================================================
-   NAVIGATION BUTTONS
-   ========================================================= */
-
-.button1,
-.button2,
-.button3 {
-    position: relative;
-    display: inline-block;
-
-    width: 90px;
-    padding: 10px;
-    margin-left: 10px;
-
-    box-sizing: border-box;
-
-    text-decoration: none;
-    text-align: center;
-
-    color: #8a10ee;
-    background-color: transparent;
-
-    font-weight: bold;
-    font-size: 15px;
-
-    border: 1.6px solid #8a10ee;
-    border-radius: 16px;
-
-    overflow: hidden;
-    isolation: isolate;
-
-    transition: 0.3s ease;
-}
-
-
-/* Yellow background */
-
-.button1::before,
-.button2::before,
-.button3::before {
-    content: "";
-
-    position: absolute;
-    inset: 0;
-
-    width: 100%;
-    height: 100%;
-
-    background-color: #ffc400c5;
-
-    border-radius: 14px;
-
-    transform: scaleX(0);
-    transform-origin: left;
-
-    transition: transform 300ms ease;
-
-    z-index: -1;
-}
-
-
-/* Hover */
-
-.button1:hover::before,
-.button2:hover::before,
-.button3:hover::before {
-    transform: scaleX(1);
-}
-
-
-/* White text on hover */
-
-.button1:hover,
-.button2:hover,
-.button3:hover {
-    color: white;
-    border-color: white;
-}
 
 /* =========================================================
    TABLET / SMALL DESKTOP
@@ -477,7 +487,7 @@ li {
     }
 
 
-    /* Sections */
+    /* Content boxes */
 
     .About,
     .Skills,
@@ -485,6 +495,7 @@ li {
         width: 92%;
         max-width: 100%;
     }
+
 
     .About {
         min-height: 250px;
@@ -514,29 +525,25 @@ li {
     }
 
 
-    /* Icon */
+    /* Menu icon */
 
-    .container1 .Iconlogo img {
-        width: 36px;
-        height: 31px;
-    }
+    .menuicon {
+        display: block;
 
-
-    /* Mobile menu icon */
-
-    .container1 .menuicon {
         position: absolute;
 
         right: 20px;
+        top: 50%;
 
-        display: block;
+        transform: translateY(-50%);
     }
 
 
-    /* Navigation links hidden */
+    /* Hide navigation */
 
     .topnav li a {
         display: none;
+
         font-size: 14px;
     }
 
@@ -544,44 +551,45 @@ li {
     /* Responsive navigation */
 
     .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive .menuicon {
         position: absolute;
 
+        top: 60px;
         right: 0;
-        top: 0;
+
+        display: flex;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 180px;
+
+        padding: 10px;
+
+        background: #1b1b1b;
+
+        border-radius: 10px;
+    }
+
+    .topnav.responsive li {
+        display: block;
+
+        margin: 8px 0;
     }
 
     .topnav.responsive a {
-        float: none;
-
         display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
     }
 
 
-    /* Buttons */
+    /* Icon */
 
-    .button1::before,
-    .button2::before,
-    .button3::before {
-        top: 5%;
-
-        width: 88px;
-        height: 10px;
-    }
-
-    .button1::before {
-        left: 9%;
-    }
-
-    .button2::before {
-        left: 38%;
-    }
-
-    .button3::before {
-        left: 67.6%;
+    .container1 .Iconlogo {
+        width: 36px;
+        height: 31px;
     }
 }
 
@@ -593,16 +601,13 @@ li {
 
 @media screen and (max-width: 900px) {
 
-    /* Main content */
-
     .Btext {
         width: 94%;
-        font-size: 19px;
         gap: 2rem;
+
+        font-size: 19px;
     }
 
-
-    /* Sections */
 
     .About,
     .Skills,
@@ -611,15 +616,11 @@ li {
     }
 
 
-    /* Titles */
-
     .Title,
     .TitleAct {
         font-size: 40px;
     }
 
-
-    /* Profile picture */
 
     .Profile_Pic {
         width: 300px;
@@ -627,10 +628,9 @@ li {
     }
 
 
-    /* Navigation */
-
     li {
         margin-right: 12px;
+
         font-size: 16px;
     }
 }
@@ -643,36 +643,33 @@ li {
 
 @media screen and (max-width: 600px) {
 
-    body {
-        overflow-x: hidden;
-    }
-
-
-    /* Header */
-
     header,
     .Menu {
         height: 60px;
     }
 
+
     .Menu {
         padding: 0 12px;
     }
+
 
     .container1 {
         min-height: 55px;
     }
 
 
-    /* Logo */
-
     .Text_Logo {
         margin-left: 8px;
+
         font-size: 20px;
     }
 
 
-    /* Main content */
+    .menuicon {
+        right: 5px;
+    }
+
 
     .Btext {
         width: 94%;
@@ -682,13 +679,11 @@ li {
 
         gap: 1.5rem;
 
-        font-size: 17px;
-
         margin-top: 8%;
+
+        font-size: 17px;
     }
 
-
-    /* Sections */
 
     .About,
     .Skills,
@@ -697,7 +692,6 @@ li {
         max-width: 100%;
 
         min-height: 0;
-
         height: auto;
 
         padding: 16px;
@@ -708,8 +702,6 @@ li {
     }
 
 
-    /* Profile picture */
-
     .Profile_Pic {
         width: 240px;
         height: 240px;
@@ -718,66 +710,60 @@ li {
     }
 
 
-    /* Titles */
-
     .Title,
     .TitleAct {
         font-size: 32px;
     }
 
 
-    /* Skill bars */
-
     .Sbar {
         width: 100%;
     }
+
 
     .Sbar h6 {
         right: 0;
     }
 
 
-    /* Navigation */
+    /* Mobile navigation */
 
     .topnav {
         text-align: right;
     }
 
-    .topnav.responsive {
-        position: absolute;
 
+    .topnav.responsive {
         top: 55px;
         right: 0;
-        left: auto;
 
         width: 180px;
 
-        box-sizing: border-box;
+        padding: 10px;
 
         background: #1b1b1b;
-
-        padding: 10px;
 
         text-align: right;
     }
 
+
     .topnav.responsive li {
         display: block;
+
         margin: 8px 0;
     }
+
 
     .topnav.responsive a {
         display: block;
 
         width: 100%;
 
-        box-sizing: border-box;
-
         padding: 8px 0;
     }
 
 
-    /* Buttons */
+    /* Mobile buttons */
 
     .button1,
     .button2,
@@ -785,11 +771,11 @@ li {
         width: 80px;
 
         padding: 8px;
-
         margin-left: 5px;
 
         font-size: 13px;
     }
+
 
     .button1::before,
     .button2::before,
@@ -798,7 +784,7 @@ li {
     }
 
 
-    /* Activity cards */
+    /* Activity images */
 
     .plab1,
     .plab2,
@@ -806,13 +792,26 @@ li {
     .plab4,
     .plab5,
     .plab6 {
+        position: relative;
+
         width: 100%;
         max-width: 270px;
 
         height: auto;
         min-height: 294px;
+    }
 
-        position: relative;
+
+    /* Bottom box */
+
+    .bottom-box {
+        width: 94%;
+
+        height: 100px;
+
+        margin: 30px auto 40px;
+
+        border-radius: 18px;
     }
 }
 
@@ -824,62 +823,49 @@ li {
 
 @media screen and (max-width: 380px) {
 
-    /* Header */
-
     header,
     .Menu {
         height: 55px;
     }
+
 
     .Menu {
         padding: 0 10px;
     }
 
 
-    /* Logo */
-
     .Text_Logo {
         font-size: 18px;
     }
 
 
-    /* Main content */
-
     .Btext {
         width: 92%;
+
         font-size: 16px;
     }
 
-
-    /* Sections */
 
     .About,
     .Skills,
     .Activities {
         width: 100%;
+
         padding: 14px;
     }
 
 
-    /* Profile picture */
-
     .Profile_Pic {
         width: 200px;
         height: 200px;
-
-        margin: 0 auto;
     }
 
-
-    /* Titles */
 
     .Title,
     .TitleAct {
         font-size: 28px;
     }
 
-
-    /* Activity cards */
 
     .plab1,
     .plab2,

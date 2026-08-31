@@ -1,17 +1,27 @@
-/* Base styles */
-body {
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    background-color: #333;
+/* =========================================================
+   BASE
+   ========================================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    background-image: url(wallpaper1.JPG);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    background-color: #333;
+    overflow-x: hidden;
 }
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 
 .Btext {
     font-family: 'Times New Roman', serif;
@@ -24,41 +34,90 @@ body {
     flex-wrap: wrap;
 
     gap: 3rem;
+
     width: 92%;
     max-width: 1260px;
-    margin: 19% auto 0;
+
+    margin: 9% auto 0;
+
+    z-index: -3;
 }
+
+
+/* =========================================================
+   ABOUT / SKILLS / ACTIVITIES
+   ========================================================= */
 
 .About,
 .Skills,
 .Activities {
-    align-items: center;
-    margin: 0 auto;
     color: white;
-    border-radius: 25px;
     background: #1a1a1a;
-    padding: 20px;
-}
 
-.About {
-    margin-top: 110px;
-    width: 640px;
-    max-width: 100%;
-    height: 250px;
+    border-radius: 25px;
+
+    padding: 30px;
+
+    margin-left: auto;
+    margin-right: auto;
+
     box-sizing: border-box;
 }
 
-.Skills {
-    max-width: 2060px;
-    width: 1440px;
-    height: 670px;
+
+/* About Me */
+
+.About {
+    width: 640px;
+    max-width: 100%;
+    min-height: 250px;
 }
 
-.Activities {
-    max-width: 2060px;
+
+/* Skills */
+
+.Skills {
     width: 1440px;
-    height: 3670px;
+    max-width: 100%;
+    min-height: 670px;
 }
+
+
+/* Activities */
+
+.Activities {
+    width: 1440px;
+    max-width: 100%;
+    min-height: 3670px;
+}
+
+
+/* Activity titles */
+
+.Activities div li a h3 {
+    flex: auto;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TITLES
+   ========================================================= */
+
+.Title,
+.TitleAct {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.TitleAct {
+    flex: auto;
+}
+
+
+/* =========================================================
+   SKILLS BARS
+   ========================================================= */
 
 .Sbar {
     display: flex;
@@ -70,18 +129,27 @@ body {
     right: 10px;
 }
 
+
+/* Empty skill bars */
+
 .S_htmlbar,
 .S_javabar,
 .S_cbar,
 .S_javasbar,
 .S_plpbar,
 .S_sqlbar {
+    position: relative;
+
     width: 100%;
     height: 6px;
+
     border-radius: 25px;
+
     background: white;
-    position: relative;
 }
+
+
+/* Filled skill bars */
 
 .S_htmlpar,
 .S_javapar,
@@ -90,10 +158,21 @@ body {
 .S_plppar,
 .S_sqlpar {
     position: absolute;
+
     height: 6px;
+
     border-radius: 25px;
-    background: linear-gradient(to right, hsl(310, 80%, 40%), #c46732, #f7e709);
+
+    background: linear-gradient(
+        to right,
+        hsl(310, 80%, 40%),
+        #c46732,
+        #f7e709
+    );
 }
+
+
+/* Skill percentages */
 
 .S_htmlpar  { width: 46%; }
 .S_javapar  { width: 21%; }
@@ -102,122 +181,248 @@ body {
 .S_plppar   { width: 34%; }
 .S_sqlpar   { width: 48%; }
 
-.Activities div li a h3 {
-    flex: auto;
-    text-align: center;
-}
 
-.TitleAct,
-.Title {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 50px;
-}
-
-.TitleAct {
-    flex: auto;
-}
+/* =========================================================
+   PROFILE / 1x1 PICTURE
+   ========================================================= */
 
 .Profile_Pic {
     display: block;
+
     width: 370px;
     height: 370px;
+
     object-fit: cover;
+
     border: none;
-    margin: 0;
+
+    background-color: #1a1a1a;
+
+    margin: 0 auto;
+
     padding: 4px;
+
     box-sizing: border-box;
 }
 
-.Menu {
-    background: linear-gradient(to right, hsl(310, 80%, 40%), #c46732, #f7e709);
-    font-family: Calibri, sans-serif;
-    padding: 0 15px;
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+header {
     position: sticky;
-    border: 1px solid #eedf0b;
-    line-height: 0.8;
-    z-index: 1;
+
+    top: 0;
+
+    width: 100%;
+    height: 60px;
+
+    background: #1b1b1b;
+
+    z-index: 1000;
 }
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
+
+.Menu {
+    width: 100%;
+    height: 60px;
+
+    box-sizing: border-box;
+
+    background: linear-gradient(
+        to right,
+        hsl(310, 80%, 40%),
+        #c46732,
+        #f7e709
+    );
+
+    font-family: Calibri, sans-serif;
+
+    padding: 0 20px;
+
+    border: 1px solid #eedf0b;
+
+    line-height: normal;
+}
+
+
+/* Header container */
 
 .container1 {
+    width: 100%;
+    height: 100%;
+
     display: flex;
     align-items: center;
+
+    box-sizing: border-box;
+
+    position: relative;
 }
 
+
+/* Logo text */
+
 .Text_Logo {
+    margin-left: 10px;
+
     font-size: 25px;
     font-weight: 600;
+
     color: white;
+
+    white-space: nowrap;
 }
+
+
+/* Secondary container */
 
 .container2 {
     margin-top: 1.5%;
     margin-left: 1%;
+
     color: #b3b3b3;
 }
 
-ul {
-    position: relative;
-    left: 50%;
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.topnav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+
+    margin-left: auto;
+
+    padding: 0;
+
+    position: static;
 }
+
 
 li {
     list-style: none;
+
     display: inline-flex;
+
     color: white;
+
     font-size: 18px;
     font-weight: bold;
-    margin-right: 25px;
+
+    margin: 0;
 }
 
-header {
-    position: sticky;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    background: #1b1b1b;
-    z-index: 1;
+
+/* Navigation hover */
+
+.topnav a:hover {
+    background-color: white;
 }
+
+.topnav a.active {
+    color: white;
+}
+
+
+/* Menu icon */
+
+.menuicon {
+    display: none;
+}
+
+
+/* =========================================================
+   NAVIGATION BUTTONS
+   ========================================================= */
 
 .button1,
 .button2,
 .button3 {
+    position: relative;
+
     text-decoration: none;
     text-align: center;
+
     border: 1.6px solid #8a10ee;
+
     margin-left: 10px;
+
     border-radius: 16px;
+
     padding: 10px;
+
     width: 90px;
+
     color: #8a10ee;
+
     font-weight: bold;
     font-size: 15px;
+
     --accent-color: #ffc400c5;
+
     transition: color 300ms ease-in-out;
+
     z-index: 1;
 }
+
+
+/* Button hover background */
 
 .button1::before,
 .button2::before,
 .button3::before {
     position: absolute;
+
     content: '';
+
     top: 0;
     right: 0;
     bottom: 0;
+
     z-index: -1;
+
     margin-left: 10px;
+
     border-radius: 16px;
+
     padding: 10px;
+
     width: 90px;
+
     background-color: var(--accent-color);
+
     transition: transform 300ms ease-in-out;
+
     transform: scaleX(0);
 }
 
-.button1::before { left: 8.6%; }
-.button2::before { left: 39.3%; }
-.button3::before { left: 70.1%; }
+
+/* Button positions */
+
+.button1::before {
+    left: 8.6%;
+}
+
+.button2::before {
+    left: 39.3%;
+}
+
+.button3::before {
+    left: 70.1%;
+}
+
+
+/* Button hover */
 
 .button1:hover::before,
 .button1:focus::before,
@@ -238,27 +443,20 @@ header {
     border: 1px solid white;
 }
 
-.topnav a:hover {
-    background-color: white;
-}
 
-.topnav a.active {
-    color: white;
-}
+/* =========================================================
+   LARGE DESKTOP
+   1261px+
+   ========================================================= */
 
-.menuicon {
-    display: none;
-}
-
-/* =========================
-   Responsive Design
-   Desktop → Tablet → Phone
-   ========================= */
-
-/* Large desktop */
 @media screen and (min-width: 1261px) {
+
     .Btext {
         width: min(1260px, 92%);
+    }
+
+    .About {
+        width: 640px;
     }
 
     .Skills,
@@ -266,18 +464,21 @@ header {
         width: min(1440px, 92%);
     }
 
-    .About {
-        width: min(640px, 80%);
+    .Profile_Pic {
+        width: 370px;
+        height: 370px;
     }
 }
 
-/* Tablet and smaller desktop */
+
+/* =========================================================
+   TABLET / SMALL DESKTOP
+   901px - 1260px
+   ========================================================= */
+
 @media screen and (max-width: 1260px) {
-    .Profile_Pic {
-        width: 340px;
-        height: 340px;
-        margin: 5% auto;
-    }
+
+    /* Main content */
 
     .Btext {
         width: 92%;
@@ -285,13 +486,14 @@ header {
         margin-top: 5%;
     }
 
+
+    /* Sections */
+
     .About,
     .Skills,
     .Activities {
-        box-sizing: border-box;
         width: 92%;
         max-width: 100%;
-        height: auto;
     }
 
     .About {
@@ -306,34 +508,50 @@ header {
         min-height: 3670px;
     }
 
-    
-.Text_Logo {
+
+    /* Profile picture */
+
+    .Profile_Pic {
+        width: 340px;
+        height: 340px;
+    }
+
+
+    /* Logo */
+
+    .Text_Logo {
         font-size: 25px;
     }
+
+
+    /* Icon */
 
     .container1 .Iconlogo img {
         width: 36px;
         height: 31px;
     }
 
-    .Menu .container1 .topnav {
+
+    /* Mobile menu icon */
+
+    .container1 .menuicon {
         position: absolute;
-        top: 42px;
-        left: 0;
-        right: 0;
-        text-align: right;
+
+        right: 20px;
+
+        display: block;
     }
+
+
+    /* Navigation links hidden */
 
     .topnav li a {
         display: none;
         font-size: 14px;
     }
 
-    .container1 .menuicon {
-        position: absolute;
-        right: 3%;
-        display: block;
-    }
+
+    /* Responsive navigation */
 
     .topnav.responsive {
         position: relative;
@@ -341,40 +559,60 @@ header {
 
     .topnav.responsive .menuicon {
         position: absolute;
+
         right: 0;
         top: 0;
     }
 
     .topnav.responsive a {
         float: none;
+
         display: block;
     }
+
+
+    /* Buttons */
 
     .button1::before,
     .button2::before,
     .button3::before {
         top: 5%;
+
         width: 88px;
         height: 10px;
     }
 
-    .button1::before { left: 9%; }
-    .button2::before { left: 38%; }
-    .button3::before { left: 67.6%; }
-}
-
-/* Tablet */
-@media screen and (max-width: 900px) {
-    .Profile_Pic {
-        width: 300px;
-        height: 300px;
-        margin: 6% auto;
+    .button1::before {
+        left: 9%;
     }
 
+    .button2::before {
+        left: 38%;
+    }
+
+    .button3::before {
+        left: 67.6%;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   601px - 900px
+   ========================================================= */
+
+@media screen and (max-width: 900px) {
+
+    /* Main content */
+
     .Btext {
+        width: 94%;
         font-size: 19px;
         gap: 2rem;
     }
+
+
+    /* Sections */
 
     .About,
     .Skills,
@@ -382,15 +620,24 @@ header {
         width: 94%;
     }
 
+
+    /* Titles */
+
     .Title,
     .TitleAct {
         font-size: 40px;
     }
 
-    
-ul {
-        left: auto;
+
+    /* Profile picture */
+
+    .Profile_Pic {
+        width: 300px;
+        height: 300px;
     }
+
+
+    /* Navigation */
 
     li {
         margin-right: 12px;
@@ -398,69 +645,98 @@ ul {
     }
 }
 
-/* Phone */
+
+/* =========================================================
+   PHONE
+   381px - 600px
+   ========================================================= */
+
 @media screen and (max-width: 600px) {
-    .Profile_Pic {
-        width: 240px;
-        height: 240px;
-        margin: 10% auto;
-    }
 
     body {
         overflow-x: hidden;
     }
 
-    header {
+
+    /* Header */
+
+    header,
+    .Menu {
         height: 55px;
     }
 
     .Menu {
-        padding: 0 10px;
+        padding: 0 12px;
     }
 
     .container1 {
         min-height: 55px;
     }
 
+
+    /* Logo */
+
     .Text_Logo {
+        margin-left: 8px;
         font-size: 20px;
     }
 
+
+    /* Main content */
+
     .Btext {
         width: 94%;
-        display: block;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 1.5rem;
+
         font-size: 17px;
+
         margin-top: 8%;
     }
+
+
+    /* Sections */
 
     .About,
     .Skills,
     .Activities {
         width: 100%;
         max-width: 100%;
-        box-sizing: border-box;
-        padding: 16px;
-        margin: 15px auto;
-        border-radius: 18px;
+
+        min-height: 0;
+
         height: auto;
+
+        padding: 16px;
+
+        margin: 15px auto;
+
+        border-radius: 18px;
     }
 
-    .About {
-        min-height: 0;
+
+    /* Profile picture */
+
+    .Profile_Pic {
+        width: 240px;
+        height: 240px;
+
+        margin: 0 auto;
     }
 
-    .Skills {
-        min-height: 0;
-    }
 
-    .Activities {
-        min-height: 0;
-    }
-    
-.Title,
+    /* Titles */
+
+    .Title,
     .TitleAct {
         font-size: 32px;
     }
+
+
+    /* Skill bars */
 
     .Sbar {
         width: 100%;
@@ -470,37 +746,58 @@ ul {
         right: 0;
     }
 
-    ul {
-        left: auto;
-        padding: 0;
-        margin: 0;
-    }
 
-    li {
-        display: block;
-        margin: 8px 0;
-        font-size: 15px;
-    }
+    /* Navigation */
 
     .topnav {
         text-align: right;
     }
 
     .topnav.responsive {
+        position: absolute;
+
+        top: 55px;
+        right: 0;
+        left: auto;
+
+        width: 180px;
+
+        box-sizing: border-box;
+
         background: #1b1b1b;
+
         padding: 10px;
+
+        text-align: right;
+    }
+
+    .topnav.responsive li {
+        display: block;
+        margin: 8px 0;
     }
 
     .topnav.responsive a {
+        display: block;
+
+        width: 100%;
+
+        box-sizing: border-box;
+
         padding: 8px 0;
     }
+
+
+    /* Buttons */
 
     .button1,
     .button2,
     .button3 {
         width: 80px;
+
         padding: 8px;
+
         margin-left: 5px;
+
         font-size: 13px;
     }
 
@@ -510,6 +807,9 @@ ul {
         display: none;
     }
 
+
+    /* Activity cards */
+
     .plab1,
     .plab2,
     .plab3,
@@ -518,28 +818,50 @@ ul {
     .plab6 {
         width: 100%;
         max-width: 270px;
+
         height: auto;
         min-height: 294px;
+
         position: relative;
     }
 }
 
-/* Small phone */
+
+/* =========================================================
+   SMALL PHONE
+   380px AND BELOW
+   ========================================================= */
+
 @media screen and (max-width: 380px) {
-    .Profile_Pic {
-        width: 200px;
-        height: 200px;
-        margin: 10% auto;
+
+    /* Header */
+
+    header,
+    .Menu {
+        height: 55px;
     }
+
+    .Menu {
+        padding: 0 10px;
+    }
+
+
+    /* Logo */
 
     .Text_Logo {
         font-size: 18px;
     }
 
+
+    /* Main content */
+
     .Btext {
         width: 92%;
         font-size: 16px;
     }
+
+
+    /* Sections */
 
     .About,
     .Skills,
@@ -548,12 +870,28 @@ ul {
         padding: 14px;
     }
 
+
+    /* Profile picture */
+
+    .Profile_Pic {
+        width: 200px;
+        height: 200px;
+
+        margin: 0 auto;
+    }
+
+
+    /* Titles */
+
     .Title,
     .TitleAct {
         font-size: 28px;
     }
-    
-.plab1,
+
+
+    /* Activity cards */
+
+    .plab1,
     .plab2,
     .plab3,
     .plab4,
@@ -561,55 +899,5 @@ ul {
     .plab6 {
         max-width: 270px;
         min-height: 294px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .Btext {
-        gap: 2rem;
-    }
-
-    .Profile_Pic {
-        width: 300px;
-        height: 300px;
-    }
-
-    .About {
-        width: 94%;
-        height: auto;
-        min-height: 250px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .Btext {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 94%;
-        margin: 8% auto 0;
-    }
-
-    .Profile_Pic {
-        width: 240px;
-        height: 240px;
-        margin: 0 auto;
-    }
-
-    .About {
-        width: 100%;
-        height: auto;
-        min-height: 0;
-    }
-}
-
-@media screen and (max-width: 380px) {
-    .Profile_Pic {
-        width: 200px;
-        height: 200px;
-    }
-
-    .About {
-        width: 100%;
     }
 }

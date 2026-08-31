@@ -335,7 +335,7 @@ header {
 .topnav {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
 
     gap: 10px;
 
@@ -743,11 +743,11 @@ li {
     .topnav.responsive {
         position: absolute;
 
-        top: 55px;
+        top: 43px;
         right: 0;
         left: auto;
 
-        width: 180px;
+        width: 205px;
 
         box-sizing: border-box;
 

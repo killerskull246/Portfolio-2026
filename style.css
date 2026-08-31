@@ -1,6 +1,5 @@
 /* =========================================================
-   PORTFOLIO STYLE SHEET
-   Organized desktop-first version
+   BASE
    ========================================================= */
 
 * {
@@ -34,15 +33,24 @@ header {
     position: sticky;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 60px;
+
     background: #1b1b1b;
+
     z-index: 1000;
 }
+
+
+/* =========================================================
+   MENU
+   ========================================================= */
 
 .Menu {
     width: 100%;
     height: 60px;
+
     padding: 0 20px;
 
     background: linear-gradient(
@@ -53,12 +61,19 @@ header {
     );
 
     border: 1px solid #eedf0b;
+
     font-family: Calibri, sans-serif;
     line-height: normal;
 }
 
+
+/* =========================================================
+   HEADER CONTAINER
+   ========================================================= */
+
 .container1 {
     position: relative;
+
     width: 100%;
     height: 100%;
 
@@ -66,18 +81,37 @@ header {
     align-items: center;
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
 .Iconlogo {
     width: 36px;
     height: 31px;
-    flex-shrink: 0;
 }
 
 .Text_Logo {
-    margin: 0 0 0 10px;
+    margin-left: 10px;
+
     color: white;
+
     font-size: 25px;
     font-weight: 600;
+
     white-space: nowrap;
+}
+
+
+/* =========================================================
+   SECONDARY CONTAINER
+   ========================================================= */
+
+.container2 {
+    margin-top: 1.5%;
+    margin-left: 1%;
+
+    color: #b3b3b3;
 }
 
 
@@ -91,33 +125,44 @@ header {
     justify-content: flex-end;
 
     gap: 10px;
-    margin: 0 0 0 auto;
+
+    margin-left: auto;
     padding: 0;
-    list-style: none;
 }
 
-.topnav li {
+li {
     list-style: none;
+
+    display: inline-flex;
+
     margin: 0;
-    padding: 0;
+
+    color: white;
+
+    font-size: 18px;
+    font-weight: bold;
 }
 
-.topnav a {
-    text-decoration: none;
-}
+
+/* =========================================================
+   NAVIGATION BUTTONS
+   ========================================================= */
 
 .button1,
 .button2,
 .button3 {
     position: relative;
+
     display: inline-block;
 
     width: 90px;
     padding: 10px;
     margin-left: 10px;
 
+    box-sizing: border-box;
+
     color: #8a10ee;
-    background: transparent;
+    background-color: transparent;
 
     border: 1.6px solid #8a10ee;
     border-radius: 16px;
@@ -136,6 +181,11 @@ header {
         border-color 300ms ease;
 }
 
+
+/* =========================================================
+   NAVIGATION HOVER BACKGROUND
+   ========================================================= */
+
 .button1::before,
 .button2::before,
 .button3::before {
@@ -147,21 +197,29 @@ header {
     width: 100%;
     height: 100%;
 
-    background: #ffc400c5;
+    background-color: #ffc400c5;
+
     border-radius: 14px;
 
     transform: scaleX(0);
     transform-origin: left;
 
     transition: transform 300ms ease;
+
     z-index: -1;
 }
+
+
+/* Hover animation */
 
 .button1:hover::before,
 .button2:hover::before,
 .button3:hover::before {
     transform: scaleX(1);
 }
+
+
+/* Hover text */
 
 .button1:hover,
 .button2:hover,
@@ -170,6 +228,9 @@ header {
     border-color: white;
 }
 
+
+/* Active link */
+
 .topnav a.active {
     color: white;
 }
@@ -177,19 +238,11 @@ header {
 
 /* =========================================================
    MENU ICON
-   Hidden on desktop.
-   Appears on tablets and phones.
+   Hidden on desktop
    ========================================================= */
 
 .menuicon {
     display: none;
-
-    position: absolute;
-    right: 20px;
-    top: 50%;
-
-    transform: translateY(-50%);
-    cursor: pointer;
 }
 
 
@@ -210,47 +263,84 @@ header {
 
     gap: 3rem;
 
-    font-family: "Times New Roman", serif;
+    font-family: 'Times New Roman', serif;
     font-size: 21px;
     text-align: justify;
+
+    z-index: -3;
 }
 
 
 /* =========================================================
-   ABOUT / SKILLS / ACTIVITIES
+   CONTENT BOXES
    ========================================================= */
 
 .About,
 .Skills,
 .Activities {
-    width: 100%;
-    max-width: 100%;
-
     color: white;
     background: #1a1a1a;
 
+    border-radius: 25px;
+
     padding: 30px;
+
     margin-left: auto;
     margin-right: auto;
-
-    border-radius: 25px;
 }
+
+
+/* =========================================================
+   ABOUT ME
+   ========================================================= */
 
 .About {
     width: 640px;
-    margin-top: 45px;
+    max-width: 100%;
+
     min-height: 250px;
+
+    margin-top: 45px;
+
+    scroll-margin-top: 80px;
 }
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
 
 .Skills {
     width: 1440px;
-    margin-top: 105px;
+    max-width: 100%;
+
     min-height: 670px;
+
+    margin-top: 105px;
+
+    scroll-margin-top: 80px;
 }
+
+
+/* =========================================================
+   ACTIVITIES
+   ========================================================= */
 
 .Activities {
     width: 1440px;
+    max-width: 100%;
+
     min-height: 3670px;
+
+    scroll-margin-top: 80px;
+}
+
+
+/* Activity title */
+
+.Activities div li a h3 {
+    flex: auto;
+    text-align: center;
 }
 
 
@@ -260,7 +350,7 @@ header {
 
 .Title,
 .TitleAct {
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 50px;
 }
 
@@ -268,11 +358,84 @@ header {
     flex: auto;
 }
 
-.Activities div li a h3 {
-    flex: auto;
-    text-align: center;
+
+/* =========================================================
+   PROFILE PIC - ANIMATED GRADIENT BORDER
+   ========================================================= */
+
+.Profile_Frame {
+    position: relative;
+
+    width: 370px;
+    height: 370px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    overflow: hidden;
 }
 
+
+/* Animated border */
+
+.Profile_Frame::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+    height: 150%;
+
+       background: linear-gradient(
+        45deg,
+        #6a0dad, #9b30ff, #f7e709, #333333, #111111, #6a0dad
+    );
+
+
+    animation: profileBorder 4s linear infinite;
+
+    z-index: 0;
+}
+
+
+/* Actual picture */
+
+.Profile_Pic {
+    position: relative;
+
+    width: 360px;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    background-color: #1a1a1a;
+
+    padding: 4px;
+
+    z-index: 1;
+}
+
+
+/* Border animation */
+
+@keyframes profileBorder {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
 
 /* =========================================================
    SKILL BARS
@@ -282,19 +445,15 @@ header {
     position: relative;
 
     display: flex;
-    align-items: center;
-    width: 100%;
-}
-
-.Sbar h3 {
-    margin: 14px 0 8px;
 }
 
 .Sbar h6 {
     position: absolute;
     right: 10px;
-    margin: 0;
 }
+
+
+/* Empty bars */
 
 .S_htmlbar,
 .S_javabar,
@@ -308,8 +467,12 @@ header {
     height: 6px;
 
     background: white;
+
     border-radius: 25px;
 }
+
+
+/* Filled bars */
 
 .S_htmlpar,
 .S_javapar,
@@ -318,10 +481,9 @@ header {
 .S_plppar,
 .S_sqlpar {
     position: absolute;
-    left: 0;
-    top: 0;
 
     height: 6px;
+
     border-radius: 25px;
 
     background: linear-gradient(
@@ -332,6 +494,9 @@ header {
     );
 }
 
+
+/* Skill percentages */
+
 .S_htmlpar  { width: 46%; }
 .S_javapar  { width: 21%; }
 .S_cpar     { width: 59%; }
@@ -341,80 +506,33 @@ header {
 
 
 /* =========================================================
-   PROFILE PICTURE / 1x1
+   BOTTOM BOX
    ========================================================= */
 
-/*
-   For the animated border, put the image inside:
+.bottom-box {
+    width: 92%;
+    max-width: 1260px;
 
-   <div class="profile-frame">
-       <img src="1x1pic_gt.JPG" class="Profile_Pic">
-   </div>
-*/
+    height: 120px;
 
-.profile-frame {
-    width: 370px;
-    height: 370px;
+    margin: 40px auto 60px;
 
-    padding: 4px;
-    margin: 0 auto;
+    background: #1a1a1a;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 25px;
-
-    background: linear-gradient(
-        45deg,
-        #111111,
-        #333333,
-        #6a0dad,
-        #9b30ff,
-        #f7e709,
-        #333333,
-        #111111
-    );
-
-    background-size: 400% 400%;
-    animation: profileBorder 4s linear infinite;
-}
-
-.Profile_Pic {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    border: none;
     border-radius: 20px;
 
-    background: #111111;
-}
-
-@keyframes profileBorder {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
 }
 
 
 /* =========================================================
    TABLET / SMALL DESKTOP
-   601px - 1260px
+   901px - 1260px
    ========================================================= */
 
 @media screen and (max-width: 1260px) {
+
+    /* Main content */
 
     .Btext {
         width: 92%;
@@ -422,12 +540,16 @@ header {
         margin-top: 5%;
     }
 
+
+    /* Content boxes */
+
     .About,
     .Skills,
     .Activities {
         width: 92%;
         max-width: 100%;
     }
+
 
     .About {
         min-height: 250px;
@@ -441,52 +563,87 @@ header {
         min-height: 3670px;
     }
 
-    .profile-frame {
+
+    /* Profile picture */
+
+    .Profile_Pic {
         width: 340px;
         height: 340px;
     }
 
+
+    /* Logo */
+
+    .Text_Logo {
+        font-size: 25px;
+    }
+
+
+    /* Menu icon */
+
     .menuicon {
         display: block;
+
+        position: absolute;
+
+        right: 20px;
+        top: 50%;
+
+        transform: translateY(-50%);
     }
+
+
+    /* Hide navigation */
 
     .topnav li a {
         display: none;
+
         font-size: 14px;
     }
 
+
+    /* Responsive navigation */
+
     .topnav.responsive {
         position: absolute;
+
         top: 60px;
         right: 0;
 
-        width: 180px;
+        display: flex;
 
-        display: block;
+        flex-direction: column;
+        align-items: stretch;
+
+        width: 180px;
 
         padding: 10px;
 
         background: #1b1b1b;
-        text-align: right;
+
+        border-radius: 10px;
     }
 
     .topnav.responsive li {
         display: block;
+
         margin: 8px 0;
     }
 
     .topnav.responsive a {
         display: block;
+
         width: 100%;
-        margin: 0;
-        padding: 8px 0;
+
+        box-sizing: border-box;
     }
 
-    .topnav.responsive .button1,
-    .topnav.responsive .button2,
-    .topnav.responsive .button3 {
-        width: 100%;
-        margin-left: 0;
+
+    /* Icon */
+
+    .container1 .Iconlogo {
+        width: 36px;
+        height: 31px;
     }
 }
 
@@ -500,9 +657,11 @@ header {
 
     .Btext {
         width: 94%;
-        font-size: 19px;
         gap: 2rem;
+
+        font-size: 19px;
     }
+
 
     .About,
     .Skills,
@@ -510,14 +669,23 @@ header {
         width: 94%;
     }
 
+
     .Title,
     .TitleAct {
         font-size: 40px;
     }
 
-    .profile-frame {
+
+    .Profile_Pic {
         width: 300px;
         height: 300px;
+    }
+
+
+    li {
+        margin-right: 12px;
+
+        font-size: 16px;
     }
 }
 
@@ -534,22 +702,28 @@ header {
         height: 60px;
     }
 
+
     .Menu {
         padding: 0 12px;
     }
+
 
     .container1 {
         min-height: 55px;
     }
 
+
     .Text_Logo {
         margin-left: 8px;
+
         font-size: 20px;
     }
+
 
     .menuicon {
         right: 5px;
     }
+
 
     .Btext {
         width: 94%;
@@ -559,9 +733,11 @@ header {
 
         gap: 1.5rem;
 
-        font-size: 17px;
         margin-top: 8%;
+
+        font-size: 17px;
     }
+
 
     .About,
     .Skills,
@@ -573,34 +749,96 @@ header {
         height: auto;
 
         padding: 16px;
+
         margin: 15px auto;
 
         border-radius: 18px;
     }
 
-    .profile-frame {
+
+    .Profile_Pic {
         width: 240px;
         height: 240px;
+
+        margin: 0 auto;
     }
+
 
     .Title,
     .TitleAct {
         font-size: 32px;
     }
 
+
     .Sbar {
         width: 100%;
     }
+
 
     .Sbar h6 {
         right: 0;
     }
 
-    .topnav.responsive {
-        top: 60px;
-        right: 0;
-        width: 180px;
+
+    /* Mobile navigation */
+
+    .topnav {
+        text-align: right;
     }
+
+
+    .topnav.responsive {
+        top: 55px;
+        right: 0;
+
+        width: 180px;
+
+        padding: 10px;
+
+        background: #1b1b1b;
+
+        text-align: right;
+    }
+
+
+    .topnav.responsive li {
+        display: block;
+
+        margin: 8px 0;
+    }
+
+
+    .topnav.responsive a {
+        display: block;
+
+        width: 100%;
+
+        padding: 8px 0;
+    }
+
+
+    /* Mobile buttons */
+
+    .button1,
+    .button2,
+    .button3 {
+        width: 80px;
+
+        padding: 8px;
+        margin-left: 5px;
+
+        font-size: 13px;
+    }
+
+
+    .button1::before,
+    .button2::before,
+    .button3::before {
+        display: none;
+    }
+
+
+    /* Activity images */
 
     .plab1,
     .plab2,
@@ -608,11 +846,26 @@ header {
     .plab4,
     .plab5,
     .plab6 {
+        position: relative;
+
         width: 100%;
         max-width: 270px;
+
         height: auto;
         min-height: 294px;
-        position: relative;
+    }
+
+
+    /* Bottom box */
+
+    .bottom-box {
+        width: 94%;
+
+        height: 100px;
+
+        margin: 30px auto 40px;
+
+        border-radius: 18px;
     }
 }
 
@@ -629,35 +882,44 @@ header {
         height: 55px;
     }
 
+
     .Menu {
         padding: 0 10px;
     }
+
 
     .Text_Logo {
         font-size: 18px;
     }
 
+
     .Btext {
         width: 92%;
+
         font-size: 16px;
     }
+
 
     .About,
     .Skills,
     .Activities {
         width: 100%;
+
         padding: 14px;
     }
 
-    .profile-frame {
+
+    .Profile_Pic {
         width: 200px;
         height: 200px;
     }
+
 
     .Title,
     .TitleAct {
         font-size: 28px;
     }
+
 
     .plab1,
     .plab2,

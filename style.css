@@ -360,28 +360,84 @@ li {
 
 
 /* =========================================================
-   PROFILE / 1x1 PICTURE
+   PROFILE PIC - ANIMATED GRADIENT BORDER
    ========================================================= */
 
-.Profile_Pic {
-    display: block;
+.Profile_Frame {
+    position: relative;
 
     width: 370px;
     height: 370px;
 
-    margin: 0 auto;
-    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    box-sizing: border-box;
+    margin: 0 auto;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+}
+
+
+/* Animated border */
+
+.Profile_Frame::before {
+    content: "";
+
+    position: absolute;
+
+    width: 150%;
+    height: 150%;
+
+    background: linear-gradient(
+        45deg,
+        #00ffff,
+        #00aaff,
+        #8aff00,
+        #00ffff
+    );
+
+    animation: profileBorder 4s linear infinite;
+
+    z-index: 0;
+}
+
+
+/* Actual picture */
+
+.Profile_Pic {
+    position: relative;
+
+    width: 360px;
+    height: 360px;
 
     object-fit: cover;
 
+    border-radius: 50%;
+
     background-color: #1a1a1a;
 
-    border: none;
-    border-radius: 50%;
+    padding: 4px;
+
+    z-index: 1;
 }
 
+
+/* Border animation */
+
+@keyframes profileBorder {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
 
 /* =========================================================
    SKILL BARS

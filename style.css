@@ -238,13 +238,33 @@ li {
 
 /* =========================================================
    MENU ICON
-   Hidden on desktop
+   Desktop + Tablet = hidden
+   Phone = visible
    ========================================================= */
 
 .menuicon {
     display: none;
 }
 
+
+/* =========================================================
+   PHONE ONLY
+   ========================================================= */
+
+@media screen and (max-width: 600px) {
+
+    .menuicon {
+        display: block;
+
+        position: absolute;
+
+        right: 5px;
+        top: 50%;
+
+        transform: translateY(-50%);
+    }
+
+}
 
 /* =========================================================
    MAIN CONTENT
@@ -567,19 +587,6 @@ li {
         font-size: 25px;
     }
 
-
-    /* Menu icon */
-
-    .menuicon {
-        display: block;
-
-        position: absolute;
-
-        right: 20px;
-        top: 50%;
-
-        transform: translateY(-50%);
-    }
 
 
     /* Hide navigation */

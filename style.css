@@ -444,14 +444,23 @@ ul {
 
     .About {
         min-height: 0;
+        margin-top: 150px;
+        margin-bottom: 160px;
+
     }
 
     .Skills {
-        min-height: 0;
+        min-height: 0; 
+        margin-top: 150px;
+        margin-bottom: 160px;
+
     }
 
     .Activities {
         min-height: 0;
+        margin-top: 150px;
+        margin-bottom: 160px;
+
     }
     
 .Title,
@@ -481,6 +490,7 @@ ul {
 
     .topnav {
         text-align: right;
+        
     }
 
     .topnav.responsive {
@@ -612,28 +622,3 @@ ul {
     }
 }
 
-
-
-
-
-
-
-/* Space between sections */
-.About,
-.Skills,
-.Activities {
-    margin-bottom: 60px;
-}
-
-/* Extra space around the content */
-.About {
-    padding: 30px;
-}
-
-.Skills {
-    padding: 30px;
-}
-
-.Activities {
-    padding: 30px;
-}

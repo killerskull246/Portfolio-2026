@@ -86,7 +86,7 @@ body {
 /* Skills */
 
 .Skills {
-    margin-top: 105px;
+   margin-top: 105px;
     width: 1440px;
     max-width: 100%;
     min-height: 670px;
@@ -335,7 +335,7 @@ header {
 .topnav {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
     gap: 10px;
 
@@ -743,11 +743,11 @@ li {
     .topnav.responsive {
         position: absolute;
 
-        top: 43px;
+        top: 55px;
         right: 0;
         left: auto;
 
-        width: 205px;
+        width: 180px;
 
         box-sizing: border-box;
 

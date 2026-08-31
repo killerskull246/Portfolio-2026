@@ -2,7 +2,7 @@
    BASE
    ========================================================= */
 
-* {
+{
     box-sizing: border-box;
 }
 
@@ -357,7 +357,6 @@ li {
 .button2,
 .button3 {
     position: relative;
-
     display: inline-block;
 
     width: 90px;
@@ -379,14 +378,13 @@ li {
     border-radius: 16px;
 
     overflow: hidden;
+    isolation: isolate;
 
-    --accent-color: #ffc400c5;
-
-    transition: color 300ms ease-in-out;
+    transition: 0.3s ease;
 }
 
 
-/* Yellow hover background */
+/* Yellow background */
 
 .button1::before,
 .button2::before,
@@ -394,88 +392,41 @@ li {
     content: "";
 
     position: absolute;
-
-    top: 0;
-    left: 0;
+    inset: 0;
 
     width: 100%;
     height: 100%;
 
-    padding: 0;
-    margin: 0;
-
-    background-color: var(--accent-color);
+    background-color: #ffc400c5;
 
     border-radius: 14px;
 
     transform: scaleX(0);
     transform-origin: left;
 
-    transition: transform 300ms ease-in-out;
+    transition: transform 300ms ease;
 
-    z-index: 0;
-}
-
-
-/* Keep the button text above the yellow */
-
-.button1,
-.button2,
-.button3 {
-    isolation: isolate;
+    z-index: -1;
 }
 
 
 /* Hover */
 
 .button1:hover::before,
-.button1:focus::before,
 .button2:hover::before,
-.button2:focus::before,
-.button3:hover::before,
-.button3:focus::before {
+.button3:hover::before {
     transform: scaleX(1);
 }
 
 
-/* Text and border */
+/* White text on hover */
 
 .button1:hover,
-.button1:focus,
 .button2:hover,
-.button2:focus,
-.button3:hover,
-.button3:focus {
+.button3:hover {
     color: white;
     border-color: white;
 }
-
-/* =========================================================
-   LARGE DESKTOP
-   1261px+
-   ========================================================= */
-
-@media screen and (min-width: 1261px) {
-
-    .Btext {
-        width: min(1260px, 92%);
-    }
-
-    .About {
-        width: 640px;
-    }
-
-    .Skills,
-    .Activities {
-        width: min(1440px, 92%);
-    }
-
-    .Profile_Pic {
-        width: 370px;
-        height: 370px;
-    }
-}
-
 
 /* =========================================================
    TABLET / SMALL DESKTOP

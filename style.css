@@ -46,7 +46,7 @@ body {
     width: 92%;
     max-width: 1260px;
 
-    margin: 19% auto 0;
+    margin: 12% auto 0;
 
     z-index: -3;
 }
@@ -76,7 +76,7 @@ body {
 /* About Me */
 
 .About {
-    margin-top: 35px;
+    margin-top: 45px;
     width: 640px;
     max-width: 100%;
     min-height: 250px;
@@ -86,7 +86,7 @@ body {
 /* Skills */
 
 .Skills {
-   margin-top: 45px;
+   margin-top: 105px;
     width: 1440px;
     max-width: 100%;
     min-height: 670px;

@@ -360,7 +360,7 @@ li {
 
 
 /* =========================================================
-   PROFILE PICTURE / 1x1
+   PROFILE PICTURE / 1x1 ANIMATED CIRCLE
    ========================================================= */
 
 .Profile_Pic {
@@ -373,56 +373,56 @@ li {
 
     border-radius: 50%;
 
-    margin: 0 auto;
-
-    box-sizing: border-box;
-}
-
-
-/* Animated border */
-
-.animated-border {
-    width: 370px;
-    height: 370px;
-
-    padding: 4px;
-
-    border-radius: 50%;
-
-    background: linear-gradient(
-        45deg,
-        #6a0dad,
-        #9b30ff,
-        #f7e709,
-        #333333,
-        #111111,
-        #6a0dad
-    );
-
-    background-size: 400% 400%;
-
-    animation: borderAnimation 4s linear infinite;
+    padding: 5px;
 
     box-sizing: border-box;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     margin: 0 auto;
+
+    /* Animated purple / yellow / dark border */
+    border: 4px solid transparent;
+
+    background:
+        linear-gradient(#111111, #111111) padding-box,
+        linear-gradient(
+            45deg,
+            #6a0dad,
+            #9b30ff,
+            #f7e709,
+            #333333,
+            #111111,
+            #6a0dad
+        ) border-box;
+
+    background-size:
+        100% 100%,
+        400% 400%;
+
+    animation: profileBorder 4s linear infinite;
 }
 
-@keyframes borderAnimation {
+
+/* =========================================================
+   ANIMATED BORDER
+   ========================================================= */
+
+@keyframes profileBorder {
     0% {
-        background-position: 0% 50%;
+        background-position:
+            0% 0%,
+            0% 50%;
     }
 
     50% {
-        background-position: 100% 50%;
+        background-position:
+            0% 0%,
+            100% 50%;
     }
 
     100% {
-        background-position: 0% 50%;
+        background-position:
+            0% 0%,
+            0% 50%;
     }
 }
 
